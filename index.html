@@ -135,7 +135,7 @@
             display: flex; /* Use flexbox to align logos horizontally */
             flex-direction: row;
             justify-content: flex-end; /* Align logos to the right */
-            gap: 7px; /* Space between logos */
+            gap: 12px; /* Space between logos */
         }
         
         .funding-logo {
@@ -198,6 +198,24 @@
             color: #666;
         }
         
+
+        /* Style for all logo images */
+        .logo-container img {
+            opacity: 0.8;
+            transition: transform 0.2s, opacity 0.2s; /* Smooth transition for effects */
+        }
+
+        /* Hover effect */
+        .logo-container a:hover img {
+            opacity: 1; /* Full opacity on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        /* Click effect */
+        .logo-container a:active img {
+            transform: scale(0.95); /* Slightly shrink on click */
+        }
+        
     </style>
 </head>
 
@@ -206,10 +224,18 @@
 
         <header>
         <div class="logo-container">
-            <img src="uom_policy_manchester_logo.png" alt="Policy@Manchester Logo" class="funding-logo" style="opacity: 0.8;">.
-            <img src="Tyndall-Manchester.png" alt="Tyndall Manchester Logo" class="tyndall-logo" style="opacity: 0.8;">
-            <img src="geocaret_logo.png" alt="GeoCARET Logo" class="geocaret-logo" style="opacity: 0.8;">
-            <img src="logo-banner-bw.png" alt="RE-Emission Logo" class="reemission-logo" style="opacity: 0.8;">
+            <a href="https://www.policy.manchester.ac.uk/" target="_blank">
+                <img src="uom_policy_manchester_logo.png" alt="Policy@Manchester Logo" class="funding-logo" style="opacity: 0.8;">
+            </a>
+            <a href="https://www.tyndall.manchester.ac.uk/" target="_blank">
+                <img src="Tyndall-Manchester.png" alt="Tyndall Manchester Logo" class="tyndall-logo" style="opacity: 0.8;">
+            </a>
+            <a href="https://reservoir-research.github.io/geocaret/introduction.html" target="_blank">
+                <img src="geocaret_logo.png" alt="GeoCARET Logo" class="geocaret-logo" style="opacity: 0.8;">
+            </a>
+            <a href="https://tomjanus.github.io/reemission/introduction.html" target="_blank">
+                <img src="logo-banner-bw.png" alt="RE-Emission Logo" class="reemission-logo" style="opacity: 0.8;">
+            </a>
         </div>
         </header>
     
@@ -224,7 +250,7 @@
             
             <p>The analysis was performed using <a href="https://reservoir-research.github.io/geocaret/introduction.html">GeoCARET</a>, a command line Geospatial CAtchment and REservoir analysis Tool written in Python, and <a href="https://tomjanus.github.io/reemission/introduction.html">RE-Emission</a>,  a free open-source tool for estimating, reporting and visualising greenhouse gas emissions from reservoirs. The source code for both tools is available on <b>GitHub</b> at <a href="https://github.com/Reservoir-Research/geocaret">https://github.com/Reservoir-Research/geocaret</a> and <a href="https://github.com/tomjanus/reemission">https://github.com/tomjanus/reemission</a>.</p>
 
-            <p>The interactive map displays reservoir and catchment delineations along with selected properties calculated using <a href="https://reservoir-research.github.io/geocaret/introduction.html">GeoCARET</a>. By hovering over and clicking on a specific reservoir or catchment, users can explore these properties. Clicking on a reservoir also reveals its aerial gas emission fluxes calculated with <a href="https://tomjanus.github.io/reemission/introduction.html">RE-Emission</a>. The map also contains reservoir delineations from the Global Dam and Reservoir Dataset, <a href="https://www.globaldamwatch.org/">Global Dam Watch </a>. Emission report in a PDF format and raw data in Excel format can be downloaded by clicking the corresponding buttons below the map.</p>
+            <p>The interactive map displays reservoir and catchment delineations along with selected properties calculated using <a href="https://reservoir-research.github.io/geocaret/introduction.html">GeoCARET</a>. By hovering over and clicking on a specific reservoir or catchment, users can explore these properties. Clicking on a reservoir also reveals its aerial gas emission fluxes calculated with <a href="https://tomjanus.github.io/reemission/introduction.html">RE-Emission</a>. The map also contains reservoir delineations from the Global Dam and Reservoir Dataset, <a href="https://www.globaldamwatch.org/">Global Dam Watch</a>. Emission report in a PDF format and raw data in Excel format can be downloaded by clicking the corresponding buttons below the map.</p>
             <hr>
         </div>
     </div>
