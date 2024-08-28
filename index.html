@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHG Emissions in selected Welsh and Scottish Reservoirs</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        
+        .main-container {
+              width: 75%;
+              margin: 0 auto; /* Center the container horizontally */
+        }
+        
+        .header-container {
+            display: flex; /* Use flexbox to arrange header elements */
+            justify-content: space-between; /* Distribute space between text and logo */
+            align-items: center; /* Align items vertically */
+            margin-bottom: 20px; /* Space below header container */
+        }
+
+        .text-container {
+            text-align: justify;
+        }
+
+        h1 {
+            color: #333;
+            text-align: left; /* Align heading text to the left */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        hr {
+              border: 1px solid lightgrey; /* Light grey color for the border */
+              width: 80%; /* Occupy 70% of the width */
+              margin: 20px auto; /* Center the line horizontally with some margin on top and bottom */
+        }
+        
+        .map-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center; /* Center the iframe horizontally */
+        }
+
+        iframe {
+            width: 75%;
+            height: 600px; /* Adjust height as needed */
+            height: 600px; /* Adjust height as needed */
+            border: 2px solid #ccc; /* Light gray border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+        
+        .download-container {
+            text-align: center; /* Center the button */
+            margin-top: 20px; /* Space above the button */
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 5px; /* Add space between buttons */
+        }
+
+        .download-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        
+        .contact-container {
+            text-align: center; /* Center the contact text */
+            margin-top: 20px; /* Space above the contact section */
+        }
+
+        .contact-link {
+            color: #007bff; /* Matching link color to buttons */
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        
+        .funding-container {
+            text-align: right; /* Align text and image to the right */
+            margin-top: 20px; /* Space above the funding information */
+            margin-right: 12.5%; /* Right margin to align with iframe */
+        }
+
+        .funding-text {
+            display: inline-block;
+            margin-right: 10px; /* Space between text and logo */
+            vertical-align: middle; /* Align vertically with the logo */
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .logo-container2 {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            position: absolute;
+            padding-right: 10px;
+            text-align: right;
+            top: 40px; /* Position the logo 20px from the top */
+            bottom: 20px;
+            right: 20px; 
+        }
+        
+        .logo-container {
+            display: flex; /* Use flexbox to align logos horizontally */
+            flex-direction: row;
+            justify-content: flex-end; /* Align logos to the right */
+            gap: 7px; /* Space between logos */
+        }
+        
+        .funding-logo {
+            height: 70px; /* Adjust the height of the logos */
+            background-color: white;
+            padding-top: 3px;
+            padding-bottom: 4px;
+            padding-left: 2px;
+            padding-right: 2px;
+            vertical-align: middle; /* Align vertically with the text */
+            border: 2px solid #ccc; /* Light gray border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            
+        }
+        
+        .tyndall-logo {
+            height: 70px; /* Adjust the height of the logos */
+            padding-top: 2px;
+            padding-bottom: 5px;
+            padding-left: 39px;
+            padding-right: 39px;
+            background-color: white;
+            vertical-align: middle; /* Align vertically with the text */
+            border: 2px solid #ccc; /* Light gray border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+        
+        .geocaret-logo {
+            height: 70px; /* Adjust the height of the logos */
+            padding-top: 2px;
+            padding-bottom: 5px;
+            padding-left: 13px;
+            padding-right: 13px;
+            background-color: white;
+            vertical-align: middle; /* Align vertically with the text */
+            border: 2px solid #ccc; /* Light gray border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+        
+        .reemission-logo {
+            height: 70px; /* Adjust the height of the logos */
+            padding-top: 2px;
+            padding-bottom: 5px;
+            padding-left: 13px;
+            padding-right: 13px;
+            background-color: white;
+            vertical-align: middle; /* Align vertically with the text */
+            border: 2px solid #ccc; /* Light gray border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+    </style>
+</head>
+
+
+<body>
+
+        <header>
+        <div class="logo-container">
+            <img src="uom_policy_manchester_logo.png" alt="Policy@Manchester Logo" class="funding-logo" style="opacity: 0.8;">.
+            <img src="Tyndall-Manchester.png" alt="Tyndall Manchester Logo" class="tyndall-logo" style="opacity: 0.8;">
+            <img src="geocaret_logo.png" alt="GeoCARET Logo" class="geocaret-logo" style="opacity: 0.8;">
+            <img src="logo-banner-bw.png" alt="RE-Emission Logo" class="reemission-logo" style="opacity: 0.8;">
+        </div>
+        </header>
+    
+    <!-- Header container with text and logo -->
+    <div class="main-container">
+        <div class="text-container">
+            <h1 style="text-align: center;">Mapping greenhouse gas emissions from selected Welsh and Scottish reservoirs</h1>
+            <hr>
+            <p>
+            This site provides estimates of <b>greenhouse gas emissions</b> from <b>38 selected Welsh and Scottish reservoirs</b> in the United Kingdom.
+            This project was made possible through funding from <a href="https://www.policy.manchester.ac.uk/">Policy@Manchester</a> at the University of Manchester, UK. The study was conducted by <i>Tomasz Janus</i> and <i>Jaise Kuriakose</i> from the <a href="https://www.tyndall.manchester.ac.uk">Tyndall Centre</a> at the University of Manchester.</p>
+            
+            <p>The analysis was performed using <a href="https://reservoir-research.github.io/geocaret/introduction.html">GeoCARET</a>, a command line Geospatial CAtchment and REservoir analysis Tool written in Python, and <a href="https://tomjanus.github.io/reemission/introduction.html">RE-Emission</a>,  a free open-source tool for estimating, reporting and visualising greenhouse gas emissions from reservoirs. The source code for both tools is available on <b>GitHub</b> at <a href="https://github.com/Reservoir-Research/geocaret">https://github.com/Reservoir-Research/geocaret</a> and <a href="https://github.com/tomjanus/reemission">https://github.com/tomjanus/reemission</a>.</p>
+
+            <p>The interactive map displays reservoir and catchment delineations along with selected properties calculated using <a href="https://reservoir-research.github.io/geocaret/introduction.html">GeoCARET</a>. By hovering over and clicking on a specific reservoir or catchment, users can explore these properties. Clicking on a reservoir also reveals its aerial gas emission fluxes calculated with <a href="https://tomjanus.github.io/reemission/introduction.html">RE-Emission</a>. The map also contains reservoir delineations from the Global Dam and Reservoir Dataset, <a href="https://www.globaldamwatch.org/">Global Dam Watch </a>. Emission report in a PDF format and raw data in Excel format can be downloaded by clicking the corresponding buttons below the map.</p>
+            <hr>
+        </div>
+    </div>
+    
+    <!-- <p style="text-align: center;">This work was funded by Policy@Manchester</p> -->
+
+    <div class="map-container">
+        <iframe src="map.html" allowfullscreen></iframe>
+    </div>
+
+    <div class="download-container">
+        <a href="reemission_outputs.pdf" download class="download-button">Download the Emission Report</a>
+        <a href="reemission_outputs.xlsx" download class="download-button">Download Results</a>
+    </div>
+    
+    <!-- Contact container -->
+    <div class="contact-container" style="text-align: center;">
+        <p>For more information or inquiries, please contact <a href="mailto:tomasz.janus@manchester.ac.uk" class="contact-link">Tomasz Janus</a> or <a href="mailto:jaise.kuriakose@manchester.ac.uk" class="contact-link">Jaise Kuriakose</a>.</p>
+    </div>
+    
+    <footer>
+        &copy; 2024 Tomasz Janus, University of Manchester, UK. <! --All rights reserved. -->
+    </footer>
+    
+</body>
+</html>
+
