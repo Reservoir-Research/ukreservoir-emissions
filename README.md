@@ -7,6 +7,8 @@ The results are produced in a form of an interactive map in Leaflet.js created v
 
 ## Contact:
 
+**Author**: Tomasz Janus, University of Manchester, UK
+
 - ![Email Icon](https://img.icons8.com/material-outlined/24/000000/email--v1.png) [E-Mail Me](mailto:tomasz.k.janus@gmail.com?subject=Scottish-Welsh-Reservoir-Emissions)
 - ![GitHub Icon](https://img.icons8.com/material-outlined/24/000000/github.png) [Find me on GitHub](https://github.com/tomjanus)
 
